@@ -5,11 +5,12 @@ namespace YannLo\Agl\Middlewares;
 use GuzzleHttp\Psr7\Response;
 use YannLo\Agl\Framework\App;
 use YannLo\Agl\Router\Router;
+use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Server\MiddlewareInterface;
+use YannLo\Agl\Renderer\RendererInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
-use YannLo\Agl\Renderer\RendererInterface;
 
 /**
  * ControlMatching
@@ -23,19 +24,22 @@ class ControlMatching implements MiddlewareInterface
     /**
      * __construct
      *
-     * @param  Router $router
+     * @param  ContainerInterface $container
      * @param  RendererInterface $renderer
      * @return void
      */
-    public function __construct(private Router $router, private RendererInterface $renderer)
+    public function __construct(private ContainerInterface $container, private RendererInterface $renderer)
     {
     }
 
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
 
+        $routers = $this-> container->get(Router::class);
 
-        $route = $this->router->match($request);
+        $router = $routers["user"];
+
+        $route = $router->match($request);
 
         if (is_null($route)) {
             $response = new Response();

@@ -43,7 +43,7 @@ class ExampleAction implements MiddlewareInterface
         $data["article"] = $this -> manager -> getOnce($data["routeParams"]["id"]);
 
         if ($data['routeParams']['slug'] != $data["article"] -> slug()) {
-            return (new Response(301)) -> withHeader("location", $data["article"]->slug()."-".$data["article"]->id());
+            return (new Response(301)) -> withHeader("location", $data["article"]->slug() . "-" . $data["article"]->id());
         }
 
         return new Response(body: $this->renderer->render("@Example/show", $data));

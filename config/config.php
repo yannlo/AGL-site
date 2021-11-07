@@ -22,7 +22,11 @@ return [
 
     // basic class
         // router
-    Router::class => create(),
+    Router::class => [
+        "user" => create(Router::class),
+        "policeman" => create(Router::class),
+        "admin" => create(Router::class)
+    ],
 
         // renderer
     RendererInterface::class => factory(TwigRendererFactory::class),

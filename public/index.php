@@ -14,6 +14,7 @@ use YannLo\Agl\Modules\Examples\Example;
 
 $modules =[
     Error::class,
+    Example::class
     // modules name here
 ];
 

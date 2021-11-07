@@ -30,7 +30,7 @@ class Example extends Module
     {
         $renderer = $container -> get(RendererInterface::class);
 
-        $router = $container -> get(Router::class);
+        $router = ($container -> get(Router::class))["user"];
 
         $action = $container -> get(ExampleAction::class);
 

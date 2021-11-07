@@ -6,6 +6,9 @@
 
     <file>src/</file>
 
-    <rule ref="PSR12"></rule>
+    <rule ref="PSR12">
+        <exclude name="PSR1.Classes.ClassDeclaration.MissingNamespace"/>
+    </rule>
+    
     <rule ref="Generic.Arrays.DisallowLongArraySyntax"></rule>
 </ruleset>

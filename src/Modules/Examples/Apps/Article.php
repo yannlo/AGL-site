@@ -10,7 +10,7 @@ namespace YannLo\Agl\Modules\Examples\Apps;
 class Article
 {
     use \YannLo\Agl\Modules\Tools\App\Hydration;
-    
+
     private int $id;
     private string $title;
     private string $slug;
