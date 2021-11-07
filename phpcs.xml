@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ruleset name="Basic phpcs">
+    <description>Agl phpcs rulers</description>
+    <arg name="colors"/>
+    <arg value="p"/>
+
+    <file>src/</file>
+
+    <rule ref="PSR12"></rule>
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax"></rule>
+</ruleset>

@@ -1,0 +1,38 @@
+{
+    "name": "ehuiy/basic",
+    "description": "permit to get basic php project",
+    "type": "project",
+    "require": {
+        "mezzio/mezzio-fastroute": "^3.3",
+        "guzzlehttp/psr7": "^2.1",
+        "twig/twig": "^3.3",
+        "php-di/php-di": "^6.3",
+        "robmorgan/phinx": "^0.12.9",
+        "psr/http-server-middleware": "^1.0",
+        "http-interop/response-sender": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "squizlabs/php_codesniffer": "^3.6",
+        "symfony/var-dumper": "^5.3",
+        "fakerphp/faker": "^1.16"
+    },
+    "license": "1.0",
+    "autoload": {
+        "psr-4": {
+            "YannLo\\Agl\\": "src/",
+            "YannLo\\Agl\\Router\\": "src/Framework/Router/",
+            "YannLo\\Agl\\Renderer\\": "src/Framework/Renderer/",
+            "YannLo\\Agl\\Middlewares\\": "src/Framework/Middlewares/",
+            "YannLo\\Agl\\Tests\\" : "tests"
+            
+        }
+    },
+    "authors": [
+        {
+            "name": "yannlo",
+            "email": "73764168+yannlo@users.noreply.github.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}

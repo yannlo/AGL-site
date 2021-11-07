@@ -1,0 +1,1 @@
+this folder content all native Manager class to the project
