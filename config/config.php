@@ -9,6 +9,11 @@ use YannLo\Agl\Router\Router;
 use YannLo\Agl\Renderer\RendererInterface;
 use YannLo\Agl\Renderer\TwigRendererFactory;
 
+use Mezzio\Session\SessionMiddleware;
+use Mezzio\Session\SessionMiddlewareFactory;
+use Mezzio\Session\SessionPersistenceInterface;
+use Mezzio\Session\Ext\PhpSessionPersistenceFactory;
+
 return [
 
     // database config

@@ -23,6 +23,7 @@
             "YannLo\\Agl\\": "src/",
             "YannLo\\Agl\\Router\\": "src/Framework/Router/",
             "YannLo\\Agl\\Renderer\\": "src/Framework/Renderer/",
+            "YannLo\\Agl\\Session\\": "src/Framework/Session/",
             "YannLo\\Agl\\Middlewares\\": "src/Framework/Middlewares/",
             "YannLo\\Agl\\Tests\\" : "tests"
             

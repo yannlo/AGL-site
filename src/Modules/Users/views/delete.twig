@@ -1,0 +1,23 @@
+{% extends "layout_basic.twig" %}
+
+{% block title "Confirmer la supression" %}
+
+{% block content %}
+<h1>Confirmer la supression</h1>
+<form action="{{route.getPath()}}" method="post">
+
+    {% if error %}
+    <div class="error">
+        <strong>Error :</strong>
+        <p>{{error}}</p>
+    </div>
+    {% endif %}
+
+    <div class="form-group">
+        <p>Voulez vous supprimer votre compte ?</p>
+        <input type="submit" name="delete" value="Confirmer" /> 
+        <input type="submit" name="delete" value="Cancel" /> 
+    </div>
+
+</form>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "layout_standard.twig" %}
+
+{% block title "Information de compte" %}
+
+
+{% block content %}
+<h1>Information de compte</h1>
+<div>
+    <p><a href="{{ (router.getRoute('user.delete')).getPath() }}">supprimer</a></p>
+    <p><a href="{{ (router.getRoute('user.update')).getPath() }}">Modifier</a></p>
+</div>
+<div>
+    <div class="component">
+        <h3>Nom</h3>
+        <p>{{ user.firstName() }}</p>
+    </div>
+
+    <div class="component">
+        <h3>Prenom</h3>
+        <p>{{ user.lastName() }}</p>
+    </div>
+
+    <div class="component">
+        <h3>email</h3>
+        <p>{{ user.email() }}</p>
+    </div>
+
+    <div class="component">
+        <h3>Adresse</h3>
+        <p>{{ user.address() }}</p>
+    </div>
+
+    <div class="component">
+        <h3>Numero de téléphone</h3>
+        <p>{{ user.phoneNumber() }}</p>
+    </div>
+</div>
+{% endblock %}

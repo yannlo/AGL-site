@@ -1,0 +1,33 @@
+{% extends "layout_basic.twig" %}
+
+{% block title "Connexion" %}
+
+
+{% block content %}
+<h1>Page de connexion</h1>
+<form action="{{route.getPath()}}" method="post">
+
+    {% if error %}
+    <div class="error">
+        <strong>Error :</strong>
+        <p>{{error}}</p>
+    </div>
+    {% endif %}
+
+    <div class="form-group">
+        <label for="email">Entrer votre email: </label> <br/>
+        <input type="email" name="email" id="email" />
+    </div>
+
+    <div class="form-group">
+        <label for="password">Entrer votre password: </label> <br/>
+        <input type="password" name="password" id="password" />
+    </div>
+
+    <p>
+        <a href="{{ (router.getRoute('user.sign-up')).getPath() }}">Inscription</a>
+    </p>
+
+    <input type="submit" value="connexion">
+</form>
+{% endblock %}

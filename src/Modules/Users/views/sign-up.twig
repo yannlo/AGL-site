@@ -1,0 +1,62 @@
+{% extends "layout_basic.twig" %}
+
+{% block title "Inscription" %}
+
+
+{% block content %}
+
+<h1>Page de inscription</h1>
+
+{% if error %}
+<div class="error">
+    <strong>Error :</strong>
+    <p>{{error}}</p>
+</div>
+{% endif %}
+
+<form action="{{route.getPath()}}" method="post">
+
+    <div class="form-group">
+        <label for="cni">Entrer votre N°CNI: </label> <br/>
+        <input type="text" name="cni" id="cni" />
+    </div>
+
+    <div class="form-group">
+        <label for="firstName">Entrer votre nom de famille: </label> <br/>
+        <input type="text" name="firstName" id="firstName" />
+    </div>
+
+    <div class="form-group">
+        <label for="lastName">Entrer votre prenom: </label> <br/>
+        <input type="text" name="lastName" id="lastName" />
+    </div>
+
+    <div class="form-group">
+        <label for="email">Entrer votre email: </label> <br/>
+        <input type="email" name="email" id="email" />
+    </div>
+
+    <div class="form-group">
+        <label for="password">Entrer votre password: </label> <br/>
+        <input type="password" name="password" id="password" />
+    </div>
+
+    <div class="form-group">
+        <label for="confirmPassword">Confirmer votre password: </label> <br/>
+        <input type="password" name="confirmPassword" id="confirmPassword" />
+    </div>
+
+    <div class="form-group">
+        <label for="address">Entrer votre adresse: </label> <br/>
+        <input type="text" name="address" id="address" />
+    </div>
+
+    <div class="form-group">
+        <label for="phoneNumber">Entrer votre numéro de telephone: </label> <br/>
+        <input type="text" name="phoneNumber" id="phoneNumber" />
+    </div>
+
+    <input type="submit" value="Inscription">
+</form>
+
+{% endblock %}

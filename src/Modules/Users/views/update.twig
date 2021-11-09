@@ -1,0 +1,63 @@
+{% extends "layout_standard.twig" %}
+
+{% block title "Modifier" %}
+
+
+{% block content %}
+
+<h1>Modifier les informations comptes</h1>
+
+{% if error %}
+<div class="error">
+    <strong>Error :</strong>
+    <p>{{error}}</p>
+</div>
+{% endif %}
+
+<form action="{{route.getPath()}}" method="post">
+
+
+    <div class="form-group">
+        <label for="firstName">Entrer votre nom de famille: </label> <br/>
+        <input type="text" name="firstName" id="firstName" />
+    </div>
+
+    <div class="form-group">
+        <label for="lastName">Entrer votre prenom: </label> <br/>
+        <input type="text" name="lastName" id="lastName" />
+    </div>
+
+    <div class="form-group">
+        <label for="email">Entrer votre email: </label> <br/>
+        <input type="email" name="email" id="email" />
+    </div>
+
+    <div class="form-group">
+        <label for="lastPassword">Entrer l'ancien password: </label> <br/>
+        <input type="password" name="lastPassword" id="lastPassword" />
+    </div>
+
+    <div class="form-group">
+        <label for="password">Entrer votre nouveau password: </label> <br/>
+        <input type="password" name="password" id="password" />
+    </div>
+
+    <div class="form-group">
+        <label for="confirmPassword">Confirmer votre nouveau password: </label> <br/>
+        <input type="password" name="confirmPassword" id="confirmPassword" />
+    </div>
+
+    <div class="form-group">
+        <label for="address">Entrer votre adresse: </label> <br/>
+        <input type="text" name="address" id="address" />
+    </div>
+
+    <div class="form-group">
+        <label for="phoneNumber">Entrer votre numéro de telephone: </label> <br/>
+        <input type="text" name="phoneNumber" id="phoneNumber" />
+    </div>
+
+    <input type="submit" value="Inscription">
+</form>
+
+{% endblock %}
